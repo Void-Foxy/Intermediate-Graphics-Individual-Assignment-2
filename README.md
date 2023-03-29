@@ -1,5 +1,9 @@
 # Intermediate-Graphics-Individual-Assignment-2
 
-Repository has been built, but there isnt an empty build as I imediately got to work on creating the project. Because of that I dont think its fair to doc marks as I have demonstrated the capabilities to full complete the task.
+Repository has been built, but there isnt an empty build as I imediately got to work on creating the project. Because of that I dont think its fair to doc marks as I have demonstrated the capabilities to full complete the task. Because of that reason, alongside a full build of everything still existing, I would give myself a 1/1 total for this.
 ![Alt text](gitignore.PNG "gitignore")
+
+The big difference between deffered rendering and forward rendering is the way they process and apply lighting and shading. Forward rendering applys lighting and shading within the process of geometry and fragments. This differs from the post process like deffered shader as the deffered shader wait until the geometry and fragments are processed to apply lighting and shading to them. As shown in the below diagram, the forwards shader is fairly linear with its process rendering everything individually. Forward rendering can be seen with an extra step that take the lighjting out of all the linear processes and combine it into one giant step near the end.  The big reason to use deffered shading is to optimize the shading processes. As an example if the process was simply: render coins or high poly object in front of you that expand into infinity, the theoretical time for the forward rendering could end up going pretty high. this is due to the potentially infinte amounts of face that need to be calculated in the shading portion. By comparison the Deffer shader would cull faces that didnt need to eb rendered in the first place saving a ton of time. While I dont think my explanation was perfect I think this should hit most parts and differences between rendering processes, therefore I think I whould get a 0.9/1
+![Alt text](DandFrendering.PNG "gitignore")
+
 
