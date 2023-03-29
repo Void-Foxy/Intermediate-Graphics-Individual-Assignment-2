@@ -1,5 +1,6 @@
 ﻿Shader "Custom/Bloom" {
 	Properties {
+		_Color("Color", Color) = (1,1,1,1)
 		_MainTex ("Texture", 2D) = "white" {}
 	}
 
@@ -8,6 +9,7 @@
 
 		sampler2D _MainTex, _SourceTex;
 		float4 _MainTex_TexelSize;
+		float4 _Color;
 
 		half4 _Filter;
 
@@ -49,6 +51,7 @@
 			soft = soft * soft * _Filter.w;
 			half contribution = max(soft, brightness - _Filter.x);
 			contribution /= max(brightness, 0.00001);
+			c.rgb *= _Color.xyz;
 			return c * contribution;
 		}
 

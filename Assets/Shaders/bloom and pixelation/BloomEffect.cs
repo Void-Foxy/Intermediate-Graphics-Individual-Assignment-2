@@ -26,6 +26,8 @@ public class BloomEffect : MonoBehaviour {
 
 	public bool debug;
 
+	public Color color;
+
 	RenderTexture[] textures = new RenderTexture[16];
 
 	[NonSerialized]
@@ -36,6 +38,7 @@ public class BloomEffect : MonoBehaviour {
 			bloom = new Material(bloomShader);
 			bloom.hideFlags = HideFlags.HideAndDontSave;
 		}
+		bloom.color = color;
 
 		float knee = threshold * softThreshold;
 		Vector4 filter;
