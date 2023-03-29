@@ -21,6 +21,6 @@ As mentioned in the name of the shader, the shader colors the shadow casted upon
 ![Alt text](code2.PNG "gitignore")
 
 The shader I will talk about is the outline shader. A simplified explanation of the shader is that it creates extra faces and extrudes the normals while coloring them in. After that it shows only the normals that are near the eadge of an object. A simple diagram shown below shows this process
-![Alt text](outline.PNG "gitignore")
+![Alt text](outline.png "gitignore")
 A great usage of outlines is using them to show the player what they are interacting with. Outlines are also a great way to highlight interactable objects. While these examples are generic, another more niche way to use outlines can be to use them to create a very interesting transition by increasing the outline until it takes over the screen. Overall outlines are a great way of drawing attension to objects or creating a bigget version/enlarging an object. As for my understanding aand score reflection, I think that The explanation and creative usage of outlines should deserve full marks for a 1/1
 
