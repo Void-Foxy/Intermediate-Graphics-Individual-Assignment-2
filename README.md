@@ -10,12 +10,17 @@ A basic resemblance of the first images was recreated (even: 100839332), alongsi
 ![Alt text](toonshadedsquarewaves.PNG "gitignore")
 ![Alt text](toonshadedsquarewaves2.PNG "gitignore")
 
-INSERT CODE SNIPPET 1 ANALYSIS HERE
-
+The script shown demos progressive upsampling. The first circled code makes sure the iterations happen in both directions. The second circled code renders every size twice. Finally the last box stores everything into an array. AS for the mark, I would say I am not quite sure to a certainty that im right so a 0.1-0.2/0.5
+![Alt text](code1.PNG "gitignore")
 
 Two post processing shaders were added to enhance the scene. Bloom was added to pop some colors, namely the blue to overlap the edges of the cubes. On top of that the overall view was pixelated to simulate the retro view that was shown in the image. While the image is not 100% faithful to original, I feel as if the effect added are to improve the look. The pixelation is made by taking samples around a pixel based on the size of the pixelation. On top of that the script attached to the camera automaticatly rounds to makes sure the aspect ratio is maintained and not warped. As for bloom, an extra color was multiplied in to give the bloom itself a little extra color. Both of these small changes add a big overall effect on the final product escpacially the extra colors being added then blened to give a better rounded edge to blend the ground and sea. Overall I would give myself a perfect score, maybe slightly lower due to not having many extra changes and effects in place (so a 3/3 or 2.8/3).
 ![Alt text](bloomandpixelation.PNG "gitignore")
 
 
+As mentioned in the name of the shader, the shader colors the shadow casted upon itself. A shadow color is declared in properties and under cgprogram. A custom lighting program that imitates lambert is used where the end has the shadow color multiplied into the shadow itself. Aside from that the rest of the shader is mostly lambert and basic syntax and shader ouputs. I am quite confident that I know what the code is about, there just seems like there isnt a lot to talk about. Overall I would say I would give myself a 0.4-0.5/0.5
+![Alt text](code2.PNG "gitignore")
 
-INSERT CODE SNIPPET 2 ANALYSIS HERE
+The shader I will talk about is the outline shader. A simplified explanation of the shader is that it creates extra faces and extrudes the normals while coloring them in. After that it shows only the normals that are near the eadge of an object. A simple diagram shown below shows this process
+![Alt text](outline.PNG "gitignore")
+A great usage of outlines is using them to show the player what they are interacting with. Outlines are also a great way to highlight interactable objects. While these examples are generic, another more niche way to use outlines can be to use them to create a very interesting transition by increasing the outline until it takes over the screen. Overall outlines are a great way of drawing attension to objects or creating a bigget version/enlarging an object. As for my understanding aand score reflection, I think that The explanation and creative usage of outlines should deserve full marks for a 1/1
+
